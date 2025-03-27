@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECG Scan Result</title>
+</head>
+<body>
+    <h1>ECG Scan Result</h1>
+    <p><strong>Patient Name:</strong> <span id="patientName"></span></p>
+    <p><strong>Patient Age:</strong> <span id="patientAge"></span></p>
+    <p><strong>Scan Result:</strong> <span id="result"></span></p>
+    <script>
+        // Get query parameters from the URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const name = urlParams.get('name');
+        const age = urlParams.get('age');
+        const result = urlParams.get('result');
+
+        // Populate the page with the query parameters
+        document.getElementById('patientName').innerText = name;
+        document.getElementById('patientAge').innerText = age;
+        document.getElementById('result').innerText = result;
+    </script>
+</body>
+</html>
